@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Виталий Липкевич — Резюме</title>
+  <meta name="description" content="Виталий Липкевич — Backend Team Lead, Руководитель отдела разработки. Python, Go, Django, Flutter, BI, DDD, микросервисы." />
+  <style>
+    :root{
+      --bg:#0f1720;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#50b2ff;
+      --accent-2:#7be495;
+      --text:#e6eef6;
+      --glass: rgba(255,255,255,0.03);
+      --maxw:1100px;
+      --radius:12px;
+      font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(80,178,255,0.05), transparent 8%),
+        radial-gradient(circle at 90% 90%, rgba(123,228,149,0.03), transparent 10%),
+        var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:32px 16px;
+    }
+    .wrap{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr 360px;gap:28px}
+    @media (max-width:960px){ .wrap{grid-template-columns:1fr; padding-bottom:40px} }
+    header.card{
+      grid-column: 1 / -1;
+      display:flex;align-items:center;gap:18px;padding:22px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);backdrop-filter: blur(6px);
+      box-shadow: 0 6px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03);
+    }
+    .avatar{
+      flex:0 0 92px;height:92px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#042127;font-size:22px;
+      box-shadow:0 6px 18px rgba(11,18,32,0.6), inset 0 1px 0 rgba(255,255,255,0.06);
+    }
+    header h1{font-size:20px;margin:0}
+    header p{margin:2px 0 0;color:var(--muted);font-size:13px}
+    .actions{margin-left:auto;display:flex;gap:10px}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);padding:8px 12px;border-radius:10px;text-decoration:none;font-size:13px}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#032226;border:0}
+    .card{background:var(--card);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 18px rgba(2,6,23,0.5)}
+    main{padding:4px 0}
+    h2{margin:0 0 12px;color:var(--text);font-size:18px}
+    .lead{color:var(--muted);margin:0 0 16px}
+    .section{margin-bottom:18px}
+    .kpi{display:flex;gap:12px;flex-wrap:wrap}
+    .chip{background:var(--glass);padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);font-size:13px;color:var(--text)}
+    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+    @media (max-width:640px){ .skills-grid{grid-template-columns:1fr} }
+    ul.plain{list-style:none;padding:0;margin:0}
+    ul.plain li{padding:8px 0;border-bottom:1px dashed rgba(255,255,255,0.02);color:var(--muted)}
+    .projects a{color:var(--accent);text-decoration:none}
+    .right .card{position:sticky;top:32px}
+    .meta{font-size:13px;color:var(--muted)}
+    footer{grid-column:1/-1;margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+    .tag{display:inline-block;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);margin:4px 6px 4px 0;color:var(--muted);font-size:13px}
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    .contact-list a{color:var(--accent);text-decoration:none;font-weight:600}
+    .small{font-size:13px;color:var(--muted)}
+    .section-title{display:flex;align-items:center;gap:12px}
+    .section-title h2{font-size:16px}
+    .read-more{margin-top:8px;display:inline-block;color:var(--accent)}
+    .icon {opacity:0.9;margin-right:8px}
+    pre{white-space:pre-wrap;background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="card" role="banner">
+  <div class="avatar">
+    <img src="my_photo.jpg" alt="Виталий Липкевич" style="width:92px;height:92px;border-radius:12px;object-fit:cover;" />
+  </div>
+  <div>
+    <h1>Виталий Липкевич</h1>
+    <p class="small">Руководитель отдела разработки · Backend Team Lead · Архитектор · Python / Go / Django / Flutter</p>
+    <p class="lead">Создаю и масштабирую высоконагруженные системы, BI-платформы и мобильные продукты. Решаю бизнес-задачи быстро и надёжно — так, чтобы в будущем не возникало проблем с поддержкой и затратами.</p>
+  </div>
+
+  <div class="actions" aria-hidden="false">
+    <a class="btn" href="mailto:vetrof@icloud.com">vetrof@icloud.com</a>
+    <a class="btn" href="https://github.com/vetrof" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn primary" href="https://www.linkedin.com/in/vitaly-lipkevich/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</header>
+
+
+    <main>
+      <section class="card section" id="about" aria-labelledby="about-title">
+        <div class="section-title"><h2 id="about-title">Обо мне</h2></div>
+        <p class="lead">
+          Руководитель отдела разработки и Backend Team Lead с опытом проектирования, разработки и запуска масштабируемых сервисов: доставки, BI, SaaS-платформ для торговых представителей и мобильных приложений.
+        </p>
+
+        <ul class="plain">
+          <li><strong>Ключевые компетенции:</strong> проектирование API (API v2), микросервисы и монолиты, DDD, Clean Architecture, CQRS.</li>
+          <li><strong>Нагрузки и масштаб:</strong> стабильная система — >70 000 запросов/сутки, пиковая нагрузка до 1000 RPS.</li>
+          <li><strong>Подход к работе:</strong> понимаю бизнес-требования и нахожу оптимальные технические решения — быстро, но с учётом поддержки и бюджета; редко говорю "невозможно".</li>
+        </ul>
+      </section>
+
+      <section class="card section" id="experience" aria-labelledby="exp-title">
+        <div class="section-title"><h2 id="exp-title">Опыт работы</h2></div>
+
+        <article style="margin-bottom:14px">
+          <h3 style="margin:0 0 6px">Холдинг «Рубиком» — Руководитель отдела разработки</h3>
+          <p class="meta">2025 — настоящее время</p>
+          <ul class="plain">
+            <li>Руководство отделом разработки (backend + mobile).</li>
+            <li>Разработка SaaS-платформы для торговых представителей (backend + mobile): аналитика, блок мотивации.</li>
+            <li>Проектирование и внедрение объединённой BI-системы холдинга.</li>
+            <li>Найм, обучение и формирование команды разработки; организация процессов и CI/CD.</li>
+          </ul>
+        </article>
+
+        <article style="margin-bottom:14px">
+          <h3 style="margin:0 0 6px">Сеть супермаркетов премиум-класса — Руководитель отдела backend-разработки, Team Lead</h3>
+          <p class="meta">2024 — 2025</p>
+          <ul class="plain">
+            <li>Ведение двух команд: доставка и аналитика.</li>
+            <li>Разработка API v2 для мобильного приложения доставки; запуск в новых городах и странах.</li>
+            <li>BI-платформа (galmart statistics) — обработка сотен миллионов транзакций; web-интерфейс для аналитиков и маркетологов.</li>
+            <li>Push-система на Firebase + Celery (десятки тысяч уведомлений в день); интеграции: 1С, УКМ-5, LOYA.</li>
+            <li>Нагрузка: >70 000 запросов/сутки, пики до 1000 RPS.</li>
+          </ul>
+        </article>
+
+        <article style="margin-bottom:14px">
+          <h3 style="margin:0 0 6px">TOO Baz Industries — Backend Developer</h3>
+          <p class="meta">2021 — 2024</p>
+          <ul class="plain">
+            <li>Создание платформы для автоматизированной торговли на маркетплейсах.</li>
+            <li>Автоматизация ценообразования, учёта остатков и обновления ассортимента.</li>
+            <li>Результат: сокращение числа маркетологов/менеджеров по продажам в ~5 раз.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3 style="margin:0 0 6px">ИП Липкевич — Fullstack / WordPress</h3>
+          <p class="meta">2013 — 2020</p>
+          <ul class="plain">
+            <li>Разработка сайтов и интернет-магазинов на WordPress, SEO, контент, интеграции платежей и CRM.</li>
+          </ul>
+        </article>
+
+      </section>
+
+      <section class="card section" id="projects" aria-labelledby="proj-title">
+        <div class="section-title"><h2 id="proj-title">Проекты (авторские и ключевые)</h2></div>
+        <div class="projects">
+          <ul class="plain">
+            <li><strong><a href="https://5place.app" target="_blank" rel="noopener">5place.app</a></strong> — мобильное приложение (Flutter + Django) для поиска интересных мест рядом; исследование метеозависимости.</li>
+            <li><strong><a href="https://github.com/vetrof/5Place_backend" target="_blank" rel="noopener">5Place_backend</a></strong> — backend сервис для 5Place (geo, PostgreSQL, API).</li>
+            <li><strong><a href="https://github.com/vetrof/5place_flutter" target="_blank" rel="noopener">5place_flutter</a></strong> — Flutter-клиент (Clean Architecture, карты Google/Яндекс).</li>
+            <li><strong><a href="https://django.help" target="_blank" rel="noopener">django.help</a></strong> — обучающий проект для начинающих Django-разработчиков.</li>
+            <li><strong>galmart statistics</strong> — внутренняя BI-платформа ритейла; сотни миллионов записей; аналитика для маркетинга и коммерции.</li>
+            <li>Сервисы регистрации чеков и розыгрышей (“Миллионы в корзине”, “Везучий чек”) — детерминированные алгоритмы, десятки тысяч регистраций/неделя.</li>
+            <li>YouTube: <a href="https://www.youtube.com/@ded-porgommist" target="_blank" rel="noopener">@ded-porgommist</a></li>
+            <li>Telegram: <a href="https://t.me/old_pogrommist" target="_blank" rel="noopener">@old_pogrommist</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card section" id="skills" aria-labelledby="skills-title">
+        <div class="section-title"><h2 id="skills-title">Навыки — детально</h2></div>
+
+        <div style="display:flex;gap:18px;flex-wrap:wrap">
+          <div style="flex:1;min-width:220px">
+            <h4 style="margin:8px 0 8px">Языки и фреймворки</h4>
+            <div class="skills-grid">
+              <div class="chip">Python (Django, DRF, FastAPI)</div>
+              <div class="chip">Go (Fiber, Echo)</div>
+              <div class="chip">Dart / Flutter (Clean Architecture)</div>
+              <div class="chip">REST, gRPC, WebSocket</div>
+            </div>
+          </div>
+
+          <div style="flex:1;min-width:220px">
+            <h4 style="margin:8px 0 8px">Данные и интеграции</h4>
+            <div class="skills-grid">
+              <div class="chip">PostgreSQL (индикация, оптимизация)</div>
+              <div class="chip">Redis, Elasticsearch</div>
+              <div class="chip">Google Maps API, Яндекс.Карты</div>
+              <div class="chip">1С, УКМ-5, LOYA, Google Sheets API</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;display:flex;gap:18px;flex-wrap:wrap">
+          <div style="flex:1;min-width:220px">
+            <h4 style="margin:8px 0 8px">DevOps / Инфраструктура</h4>
+            <div class="skills-grid">
+              <div class="chip">Docker, Docker Compose</div>
+              <div class="chip">Celery, RabbitMQ, Kafka</div>
+              <div class="chip">Prometheus, Grafana, Sentry</div>
+              <div class="chip">CI/CD (GitHub Actions / GitLab CI)</div>
+            </div>
+          </div>
+
+          <div style="flex:1;min-width:220px">
+            <h4 style="margin:8px 0 8px">Push / маркетинг</h4>
+            <div class="skills-grid">
+              <div class="chip">Firebase FCM (подписки, сегментация)</div>
+              <div class="chip">Массовые рассылки, мониторинг (Flower)</div>
+              <div class="chip">Сегментирование пользователей и таргетинг</div>
+              <div class="chip">ETL, BI-дашборды</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <h4 style="margin:8px 0 8px">Архитектурное мышление и процессы</h4>
+          <ul class="plain">
+            <li>DDD, Clean Architecture, CQRS, Event-driven</li>
+            <li>Монолиты и микросервисы — плюсы/минусы; миграции между подходами</li>
+            <li>Руководство командами, найм, интервью, code review</li>
+            <li>Баланс между скоростью разработки и долгосрочной поддержкой</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card section" id="education" aria-labelledby="edu-title">
+        <div class="section-title"><h2 id="edu-title">Образование</h2></div>
+        <p class="small"><strong>Невский университет менеджмента</strong> — Менеджмент, 2003</p>
+        <p class="small"><strong>CS50x — HarvardX</strong> — Introduction to Computer Science (C, Python, SQL, web)</p>
+      </section>
+
+      <section class="card section" id="personal" aria-labelledby="personal-title">
+        <div class="section-title"><h2 id="personal-title">Личное</h2></div>
+        <ul class="plain">
+          <li>Языки: русский (родной), английский A2 (чтение техдокументации).</li>
+          <li>Интересы: каякинг, велопоходы, пейзажная фотография, медитация.</li>
+          <li>Подход: не говорю "невозможно" — адаптируюсь, ищу альтернативы и довожу проект до результата.</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <aside class="right">
+      <div class="card">
+        <h2>Контакты</h2>
+        <div class="contact-list">
+          <div class="small">Email</div>
+          <a href="mailto:vetrof@icloud.com">vetrof@icloud.com</a>
+
+          <div class="small" style="margin-top:8px">GitHub</div>
+          <a href="https://github.com/vetrof" target="_blank" rel="noopener">github.com/vetrof</a>
+
+          <div class="small" style="margin-top:8px">LinkedIn</div>
+          <a href="https://www.linkedin.com/in/vitaly-lipkevich/" target="_blank" rel="noopener">linkedin.com/in/vitaly-lipkevich</a>
+
+          <div class="small" style="margin-top:8px">YouTube</div>
+          <a href="https://www.youtube.com/@ded-porgommist" target="_blank" rel="noopener">@ded-porgommist</a>
+
+          <div class="small" style="margin-top:8px">Telegram</div>
+          <a href="https://t.me/old_pogrommist" target="_blank" rel="noopener">@old_pogrommist</a>
+
+          <div class="small" style="margin-top:8px">Сайт / проекты</div>
+          <a href="https://django.help" target="_blank" rel="noopener">django.help</a>
+          <a href="https://5place.app" target="_blank" rel="noopener">5place.app</a>
+        </div>
+
+        <div style="margin-top:16px">
+          <h3 style="margin:8px 0">Ключевые факты</h3>
+          <div class="meta">API v2 — руководитель разработки</div>
+          <div class="meta">BI: сотни миллионов записей</div>
+          <div class="meta">Push: Firebase + Celery (десятки тысяч/день)</div>
+          <div class="meta">Нагрузка: 1000+ RPS</div>
+        </div>
+
+        <div style="margin-top:16px">
+          <h3 style="margin:8px 0">Ищу</h3>
+          <div class="small">Проекты по архитектуре, масштабированию, SaaS или руководящие роли.</div>
+        </div>
+      </div>
+    </aside>
+
+    <footer>
+      <div class="small">© <strong>Виталий Липкевич</strong> — Backend Team Lead · vetrof@icloud.com · GitHub: github.com/vetrof</div>
+    </footer>
+
+  </div>
+</body>
+</html>
