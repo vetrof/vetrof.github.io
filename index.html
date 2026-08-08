@@ -22,7 +22,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
         <style>
-            :root { --ink:#16221f; --muted:#62716b; --paper:#f5f6f0; --card:#fff; --line:#dce2dc; --green:#0c6b4d; --lime:#c6ef5b; --soft:#eaf1e8; --radius:18px; }
+            :root { --ink:#16221f; --muted:#62716b; --paper:#f5f6f0; --card:#fff; --line:#dce2dc; --green:#0c6b4d; --lime:#c6ef5b; --soft:#eaf1e8; --radius:12px; }
             * { box-sizing:border-box; margin:0; }
             html { scroll-behavior:smooth; }
             body { color:var(--ink); background:var(--paper); font-family:Manrope,Arial,sans-serif; line-height:1.62; -webkit-font-smoothing:antialiased; }
@@ -33,7 +33,7 @@
             .nav { display:flex; gap:24px; color:var(--muted); font-size:.86rem; font-weight:600; }
             .nav a { text-decoration:none; }
             .nav a:hover { color:var(--green); }
-            .hero { display:grid; grid-template-columns:1fr 270px; gap:64px; padding:78px 0 70px; align-items:end; }
+            .hero { display:grid; grid-template-columns:1fr 270px; gap:48px; padding:58px 0 56px; align-items:end; }
             .eyebrow, .label { color:var(--green); font:500 .76rem/1.2 "DM Mono",monospace; letter-spacing:.09em; text-transform:uppercase; }
             h1 { max-width:860px; margin:18px 0 25px; font-size:clamp(2.55rem,6vw,5.6rem); line-height:1.02; letter-spacing:-.065em; }
             .lead { max-width:690px; color:#405049; font-size:clamp(1.05rem,2vw,1.28rem); }
@@ -42,28 +42,27 @@
             .button { border:1px solid var(--ink); border-radius:999px; padding:12px 19px; font-size:.88rem; font-weight:700; text-decoration:none; transition:.2s; }
             .button.primary { background:var(--ink); color:white; }
             .button:hover { transform:translateY(-2px); background:var(--lime); color:var(--ink); border-color:var(--lime); }
-            .portrait { padding:12px; background:var(--lime); transform:rotate(3deg); }
-            .portrait img { display:block; width:100%; aspect-ratio:1; object-fit:cover; filter:saturate(.8); }
-            .results { margin-top:35px; }
+            .portrait img { display:block; width:100%; aspect-ratio:1; object-fit:cover; border-radius:var(--radius); filter:saturate(.8); }
+            .results { margin-top:30px; }
             .results h2 { margin-bottom:13px; font-size:.9rem; }
-            .result-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; border:1px solid var(--line); background:var(--line); }
+            .result-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; overflow:hidden; border:1px solid var(--line); border-radius:var(--radius); background:var(--line); }
             .result-card { background:var(--card); padding:20px; }
             .result-card b { display:block; color:var(--green); font-size:1.3rem; letter-spacing:-.055em; line-height:1.05; }
-            .result-card p { margin-top:8px; color:var(--muted); font-size:.79rem; line-height:1.42; }
-            .statement { background:var(--ink); color:#f7f8f1; padding:55px 0; }
+            .result-card p { margin-top:8px; color:var(--muted); font-size:.86rem; line-height:1.48; }
+            .statement { background:var(--ink); color:#f7f8f1; padding:48px 0; }
             .statement p { max-width:930px; font-size:clamp(1.45rem,3vw,2.45rem); line-height:1.25; letter-spacing:-.04em; }
             .statement strong { color:var(--lime); }
-            .section { padding:82px 0; border-bottom:1px solid var(--line); }
+            .section { padding:64px 0; border-bottom:1px solid var(--line); }
             .section-grid { display:grid; grid-template-columns:220px minmax(0,1fr); gap:46px; }
             h2 { font-size:1.1rem; letter-spacing:-.03em; }
             .section-content > p + p { margin-top:18px; }
             .section-content { max-width:810px; color:#35433e; }
             .section-content h3 { color:var(--ink); font-size:1.35rem; line-height:1.28; letter-spacing:-.035em; }
-            .services { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:32px; }
+            .services { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; overflow:hidden; background:var(--line); border:1px solid var(--line); border-radius:var(--radius); margin-top:28px; }
             .service { background:var(--card); padding:24px; }
             .service h3 { font-size:1rem; margin-bottom:8px; }
             .service p { font-size:.92rem; color:var(--muted); }
-            .workflow { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; margin-top:32px; border:1px solid var(--line); background:var(--line); }
+            .workflow { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; overflow:hidden; margin-top:28px; border:1px solid var(--line); border-radius:var(--radius); background:var(--line); }
             .workflow-step { display:grid; grid-template-columns:44px 1fr; gap:14px; padding:25px; background:var(--card); }
             .workflow-step:last-child { grid-column:1 / -1; }
             .step-number { color:var(--green); font:500 .78rem/1.4 "DM Mono",monospace; letter-spacing:.05em; }
@@ -94,12 +93,12 @@
             .role-meta span { display:block; color:var(--green); margin-top:4px; }
             .role h3 { margin-bottom:13px; }
             .stack { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
-            .stack div { padding:19px; border:1px solid var(--line); background:var(--card); }
+            .stack div { padding:19px; border:1px solid var(--line); border-radius:var(--radius); background:var(--card); }
             .stack b { font-size:.88rem; display:block; margin-bottom:7px; }
             .stack span { font-size:.82rem; color:var(--muted); }
             footer { display:flex; justify-content:space-between; gap:24px; padding:30px 0 45px; color:var(--muted); font-size:.85rem; }
             footer a { color:var(--green); font-weight:700; text-decoration:none; }
-            @media (max-width:760px) { .wrap{width:min(100% - 28px,1180px)} .top{padding:18px 0}.nav{gap:13px;font-size:.75rem}.hero{grid-template-columns:1fr;gap:35px;padding:52px 0}.portrait{width:160px;justify-self:end}.section{padding:55px 0}.section-grid,.role{grid-template-columns:1fr;gap:18px}.services,.workflow,.engagements,.approach,.stack,.result-grid{grid-template-columns:1fr}.workflow-step:last-child{grid-column:auto}.statement{padding:42px 0} footer{display:block} footer p+p{margin-top:10px} }
+            @media (max-width:760px) { .wrap{width:min(100% - 28px,1180px)} .top{padding:18px 0}.nav{gap:13px;font-size:.75rem}.hero{grid-template-columns:1fr;gap:28px;padding:38px 0 44px}.portrait{width:160px;justify-self:end}.section{padding:44px 0}.section-grid,.role{grid-template-columns:1fr;gap:18px}.services,.workflow,.engagements,.approach,.stack,.result-grid{grid-template-columns:1fr}.workflow-step:last-child{grid-column:auto}.statement{padding:36px 0} footer{display:block} footer p+p{margin-top:10px} }
         </style>
     </head>
     <body>
@@ -140,23 +139,8 @@
 <p>Моя основная специализация — запуск новых проектов с нуля. Мне интересно участвовать в продукте с самого начала: разобраться в бизнес-процессах, сформировать техническое видение, спроектировать архитектуру, собрать команду разработки и довести продукт до стабильного production.</p>
 <p>За последние годы мне приходилось совмещать роли Technical Product Lead, Software Architect, Tech Lead, Team Lead, Backend Developer, Flutter Developer и DevOps Engineer. Такой опыт позволяет видеть проект целиком и принимать технические решения с точки зрения бизнеса, стоимости поддержки и дальнейшего развития системы.</p>
 <p>Я одинаково комфортно чувствую себя в интервью с бизнесом и защите решений перед стейкхолдерами, при проектировании новой платформы, реализации наиболее сложных технических частей проекта и организации работы команды.</p>
+<h3 style="margin-top:30px">Когда я особенно полезен</h3>
 <div class="services">
-<article class="service"><h3>От бизнес-запроса до продукта</h3>
-<p>Выявление требований, интервью со стейкхолдерами, проектирование пользовательских и операционных сценариев, презентация и защита решений.</p></article><article class="service"><h3>Продукт и команда</h3>
-<p>Формирование команды разработки, техническое руководство и координация внутренних специалистов и внешних интеграторов, включая команды 1С.</p></article><article class="service"><h3>Архитектура</h3>
-<p>Проектирование архитектуры, REST API и независимых бизнес-модулей с чёткими контрактами.</p></article><article class="service"><h3>Разработка</h3>
-<p>Backend на Python и Go, мобильные приложения на Flutter, web-кабинеты и реализация наиболее сложных технических частей проекта.</p></article><article class="service"><h3>Delivery и эксплуатация</h3>
-<p>CI/CD, серверная инфраструктура, документация, контроль качества, публикация в Google Play и App Store, сопровождение и развитие продукта после запуска.</p></article>
-</div>
-<p style="margin-top:26px">Для небольших проектов могу самостоятельно закрывать большую часть технических задач. Для крупных — сформировать команду, распределить ответственность между разработчиками и организовать процесс разработки так, чтобы продукт можно было развивать годами без постоянного переписывания архитектуры.</p>
-</div>
-</div></section>
-            <section class="section"><div class="section-grid">
-<div>
-<p class="label">02 / Формат работы</p>
-<h2>Когда я особенно полезен</h2>
-</div>
-<div class="section-content"><div class="services">
 <article class="service"><h3>Запуск нового продукта</h3>
 <p>Помогаю превратить бизнес-идею в технический план: определить границы продукта, спроектировать архитектуру, выбрать стек, сформировать команду и организовать выпуск первой production-версии.</p></article><article class="service"><h3>Переход от аутсорса к in-house разработке</h3>
 <p>Принимаю проект у внешнего подрядчика, восстанавливаю техническую управляемость, формирую внутреннюю команду и выстраиваю процессы дальнейшего развития продукта.</p></article><article class="service"><h3>Модернизация существующей системы</h3>
@@ -164,11 +148,12 @@
 <p>Формирую техническое направление, декомпозирую задачи, распределяю зоны ответственности, провожу архитектурные и код-ревью и отвечаю за качество итогового решения.</p></article><article class="service"><h3>Сложные интеграции и высокая нагрузка</h3>
 <p>Проектирую API, фоновые процессы, обмен данными с учётными системами, маркетплейсами и корпоративными сервисами. Оптимизирую системы, обрабатывающие большие каталоги, потоки заказов и пользовательскую активность.</p></article><article class="service"><h3>Технический консалтинг</h3>
 <p>Помогаю оценить архитектуру и технические риски, определить приоритеты развития продукта, выбрать практичный стек и сформировать понятный план дальнейших изменений.</p></article>
-</div></div>
+</div>
+</div>
 </div></section>
             <section class="section"><div class="section-grid">
 <div>
-<p class="label">03 / Подход</p>
+<p class="label">02 / Подход</p>
 <h2>Архитектура для бизнеса</h2>
 </div>
 <div class="section-content">
@@ -195,7 +180,7 @@
 </div></section>
             <section class="section"><div class="section-grid">
 <div>
-<p class="label">04 / Собственные продукты</p>
+<p class="label">03 / Собственные продукты</p>
 <h2>Идеи, которые проверяю на практике</h2>
 </div>
 <div class="section-content">
@@ -225,7 +210,7 @@
 </div></section>
             <section class="section" id="experience"><div class="section-grid">
 <div>
-<p class="label">05 / Опыт</p>
+<p class="label">04 / Опыт</p>
 <h2>Ключевые проекты</h2>
 </div>
 <div class="section-content"><div class="roles">
@@ -263,17 +248,7 @@
 </div></section>
             <section class="section"><div class="section-grid">
 <div>
-<p class="label">06 / Формат сотрудничества</p>
-<h2>Моя роль в проектах</h2>
-</div>
-<div class="section-content">
-<p>Я могу подключаться к проекту как Technical Product Lead, Principal Engineer или Software Architect. Беру ответственность за путь от бизнес-задачи до работающего продукта: требования, сценарии, архитектуру, backend, mobile и web, интеграции, качество, инфраструктуру и коммуникацию со стейкхолдерами.</p>
-<p>Для небольшого продукта могу самостоятельно закрыть backend, мобильное приложение, web-кабинет и инфраструктуру. Для крупной системы — сформировать команду, разделить ответственность, синхронизировать интеграторов и выстроить техническое развитие продукта.</p>
-</div>
-</div></section>
-            <section class="section"><div class="section-grid">
-<div>
-<p class="label">07 / Технологии</p>
+<p class="label">05 / Технологии</p>
 <h2>Инструменты</h2>
 </div>
 <div class="section-content"><div class="stack">
@@ -291,20 +266,9 @@
 </div>
 </div></div>
 </div></section>
-            <section class="section"><div class="section-grid">
-<div>
-<p class="label">08 / Принципы</p>
-<h2>Что для меня важно</h2>
-</div>
-<div class="section-content">
-<p>Мне нравится создавать продукты, которыми люди действительно пользуются.</p>
-<p>Наиболее интересны проекты, где необходимо пройти весь путь от идеи до работающего сервиса: определить техническое направление, сформировать сильную команду, принять архитектурные решения, организовать разработку и вывести продукт в production.</p>
-<p>Именно такие задачи считаю своей основной специализацией.</p>
-</div>
-</div></section>
             <section class="section" id="workflow"><div class="section-grid">
 <div>
-<p class="label">09 / Процесс</p>
+<p class="label">06 / Процесс</p>
 <h2>Как строится работа над проектом</h2>
 </div>
 <div class="section-content">
@@ -332,11 +296,12 @@
 </div></section>
             <section class="section"><div class="section-grid">
 <div>
-<p class="label">10 / Сотрудничество</p>
+<p class="label">07 / Сотрудничество</p>
 <h2>Как можно начать</h2>
 </div>
 <div class="section-content">
-<p>Подключаюсь в том формате, который соответствует текущей стадии проекта: от оценки идеи до технического руководства действующей командой.</p>
+<p>Подключаюсь как Technical Product Lead, Principal Engineer или Software Architect — в формате, который соответствует текущей стадии проекта: от оценки идеи до технического руководства действующей командой.</p>
+<p>Для небольшого продукта могу самостоятельно закрыть backend, мобильное приложение, web-кабинет и инфраструктуру. Для крупной системы — сформировать команду, разделить ответственность, синхронизировать интеграторов и выстроить техническое развитие продукта.</p>
 <div class="engagements">
 <article class="engagement"><b>01 / Оценка</b><h3>Экспресс-оценка проекта</h3>
 <p>Разбираемся в задаче, ограничениях и рисках. На выходе — реалистичный план запуска и понимание ближайших шагов.</p></article><article class="engagement"><b>02 / Запуск</b><h3>Новый продукт</h3>
@@ -350,7 +315,7 @@
 </div></section>
             <section class="section"><div class="section-grid">
 <div>
-<p class="label">11 / Смежная экспертиза</p>
+<p class="label">08 / Смежная экспертиза</p>
 <h2>Опыт за пределами разработки</h2>
 </div>
 <div class="section-content">
